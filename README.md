@@ -2,18 +2,15 @@
 
 This project automates guest communication for hotels using Python.
 
-It sends:
-- Feedback requests after checkout
-- Win-back offers after inactivity
+The system sends personalized messages to guests after checkout, including feedback requests and win-back offers, using Email (SMTP) and WhatsApp (Twilio API).
 
-Messages are sent via:
-- Email (SMTP)
-- WhatsApp (Twilio API)
 
 ## Features
-- Unicast guest messaging
+- Automated feedback request after guest checkout.
+- Automated win-back campaign after inactivity
+- Unicast messaging (one message per guest)
 - CSV-based guest data processing
-- WhatsApp sandbox integration
+- CSV-based guest data processing
 - Event-based automation logic
 
 ## Technologies
@@ -22,14 +19,13 @@ Messages are sent via:
 - Twilio API
 - SMTP (Gmail)
 
-## How it works
+## How the System Works
 
 1. Load guest data from CSV
 2. Calculate days since checkout
 3. Trigger messages:
-   - Feedback request
-   - Win-back offer
-4. Send via Email and WhatsApp
+   - Feedback request: sent on checkout day
+   - Win-back offer: sent in after inactivity period
+4. Send via Email and WhatsApp.
 
 
-Credentials are not included in this repository.
